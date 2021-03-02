@@ -9,10 +9,13 @@ import org.springframework.stereotype.Service;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * Created by jt on 8/5/18.
+ */
 @Service
 @Profile("springdatajpa")
 public class PetTypeSDJpaService implements PetTypeService {
-    
+
     private final PetTypeRepository petTypeRepository;
 
     public PetTypeSDJpaService(PetTypeRepository petTypeRepository) {
@@ -38,13 +41,11 @@ public class PetTypeSDJpaService implements PetTypeService {
 
     @Override
     public void delete(PetType object) {
-
         petTypeRepository.delete(object);
     }
 
     @Override
     public void deleteById(Long aLong) {
-
         petTypeRepository.deleteById(aLong);
     }
 }
